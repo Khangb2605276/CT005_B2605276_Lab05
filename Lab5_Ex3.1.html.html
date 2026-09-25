@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Giới thiệu bản thân | CT005</title>
+	<style>
+		:root {
+			--ink: #172033;
+			--muted: #657083;
+			--accent: #e26d4f;
+			--accent-dark: #b94d35;
+			--surface: #ffffff;
+			--line: #e7e9ee;
+		}
+
+		* { box-sizing: border-box; }
+		body {
+			margin: 0;
+			font-family: Georgia, "Times New Roman", serif;
+			color: var(--ink);
+			background: #f8f5ef;
+			background-image: radial-gradient(#dfd8ca 0.7px, transparent 0.7px);
+			background-size: 18px 18px;
+		}
+		main { max-width: 1080px; margin: 0 auto; padding: 48px 22px 36px; }
+		.hero {
+			padding: 48px clamp(24px, 6vw, 72px);
+			border-radius: 8px;
+			background: var(--ink);
+			color: #fffaf2;
+			box-shadow: 0 16px 34px #17203324;
+		}
+		.eyebrow { margin: 0 0 12px; color: #f6b39d; font: 700 .8rem/1.4 Arial, sans-serif; letter-spacing: .14em; text-transform: uppercase; }
+		h1 { max-width: 650px; margin: 0; font-size: clamp(2.4rem, 6vw, 4.8rem); line-height: .98; letter-spacing: 0; }
+		.intro { max-width: 590px; margin: 22px 0 0; color: #d6dbe4; font: 1.05rem/1.7 Arial, sans-serif; }
+		.profile { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; margin: 28px 0 42px; border: 1px solid var(--line); background: var(--line); }
+		.profile-item { padding: 22px 24px; background: var(--surface); }
+		.profile-label { display: block; margin-bottom: 8px; color: var(--muted); font: 700 .75rem/1.3 Arial, sans-serif; letter-spacing: .1em; text-transform: uppercase; }
+		.profile-value { font-size: 1.15rem; }
+		.section-heading { display: flex; align-items: end; justify-content: space-between; gap: 20px; margin-bottom: 18px; }
+		h2 { margin: 0; font-size: 2rem; }
+		.section-heading p { margin: 0; color: var(--muted); font: .95rem Arial, sans-serif; }
+		.products { display: grid; grid-template-columns: repeat(2, 1fr); gap: 22px; }
+		.card { overflow: hidden; border: 1px solid var(--line); border-radius: 8px; background: var(--surface); box-shadow: 0 8px 22px #1720330d; }
+		.card-wide { grid-column: 1 / -1; }
+		.card-content { padding: 24px; }
+		.card-number { margin: 0 0 8px; color: var(--accent); font: 700 .8rem Arial, sans-serif; letter-spacing: .12em; }
+		h3 { margin: 0 0 9px; font-size: 1.45rem; }
+		.card-description { margin: 0 0 20px; color: var(--muted); font: .95rem/1.55 Arial, sans-serif; }
+		.button { display: inline-block; padding: 12px 17px; border-radius: 4px; background: var(--accent); color: #fff; font: 700 .9rem Arial, sans-serif; text-decoration: none; transition: background .2s ease, transform .2s ease; }
+		.button:hover, .button:focus { background: var(--accent-dark); transform: translateY(-2px); }
+		.preview { padding: 22px; background: #f2efe8; }
+		.preview img { display: block; width: 100%; height: auto; border: 1px solid #d9d5cc; }
+		.video { position: relative; aspect-ratio: 16 / 9; background: #111827; }
+		.video iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+		footer { margin-top: 36px; color: var(--muted); text-align: center; font: .85rem/1.6 Arial, sans-serif; }
+		@media (max-width: 680px) {
+			main { padding: 22px 14px; }
+			.hero { padding: 34px 24px; }
+			.profile, .products { grid-template-columns: 1fr; }
+			.card-wide { grid-column: auto; }
+			.section-heading { display: block; }
+			.section-heading p { margin-top: 7px; }
+		}
+	</style>
+</head>
+<body>
+	<main>
+		<header class="hero">
+			<p class="eyebrow">Hồ sơ học tập · CT005</p>
+			<h1>Giới thiệu bản thân</h1>
+			<p class="intro">Một không gian nhỏ để giới thiệu thông tin cá nhân và những sản phẩm đã thực hiện trong học phần.</p>
+		</header>
+
+		<section class="profile" aria-label="Thông tin cá nhân">
+			<div class="profile-item"><span class="profile-label">Họ và tên</span><span class="profile-value">Chưa cập nhật</span></div>
+			<div class="profile-item"><span class="profile-label">MSSV</span><span class="profile-value">B2605276</span></div>
+			<div class="profile-item"><span class="profile-label">Lớp học phần</span><span class="profile-value">CT005</span></div>
+		</section>
+
+		<section aria-labelledby="products-title">
+			<div class="section-heading">
+				<h2 id="products-title">Sản phẩm đã thực hiện</h2>
+				<p>Ba bài làm trong học phần</p>
+			</div>
+			<div class="products">
+				<article class="card">
+					<div class="card-content">
+						<p class="card-number">01 · NHIỆM VỤ 1.2</p>
+						<h3>Tài liệu PDF</h3>
+						<p class="card-description">Mở trực tiếp hoặc tải xuống file bài làm nhiệm vụ 1.2.</p>
+						<a class="button" href="Lab05_Ex1.2.pdf" target="_blank" rel="noopener">Mở file PDF</a>
+					</div>
+				</article>
+
+				<article class="card">
+					<div class="card-content">
+						<p class="card-number">02 · NHIỆM VỤ 2.1</p>
+						<h3>Infographic</h3>
+						<p class="card-description">Hình ảnh sản phẩm được hiển thị trực tiếp từ repository.</p>
+					</div>
+					<div class="preview"><img src="Lab05_Ex2.1.png.png" alt="Infographic về lợi ích công nghệ số"></div>
+				</article>
+
+				<article class="card card-wide">
+					<div class="card-content">
+						<p class="card-number">03 · NHIỆM VỤ 3.1</p>
+						<h3>Video giới thiệu</h3>
+						<p class="card-description">Video YouTube được nhúng để có thể phát trực tiếp trên trang.</p>
+					</div>
+					<div class="video"><iframe src="https://www.youtube-nocookie.com/embed/kc6klteVGII" title="Video giới thiệu lợi ích công nghệ số" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+				</article>
+			</div>
+		</section>
+
+		<footer>Trang được xây dựng bằng HTML và sử dụng các tài nguyên tương đối trong repository.</footer>
+	</main>
+</body>
+</html>
